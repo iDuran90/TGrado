@@ -688,7 +688,7 @@ Clasificador construido en base a la selección hecha.
 \begin_inset Text
 
 \begin_layout Itemize
-Documentación de los proceso de diseño, clasificación y pruebas de la interfaz
+Documentación de los proceso de diseño, codificación y pruebas de la interfaz
  de consultas.
  
 \end_layout
@@ -1454,14 +1454,6 @@ La teoría del proceso del desarrollo de un proyecto de descubrimiento del
 \end_layout
 
 \begin_layout Standard
-\begin_inset Graphics
-	filename v13n1a07-3.jpg
-	scale 50
-	rotateOrigin centerBottom
-
-\end_inset
-
-
 \begin_inset Float figure
 placement H
 wide false
@@ -1469,10 +1461,21 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename C:/Users/Jorge/Documents/v13n1a07-3.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Proceso 
+
 \end_layout
 
 \end_inset
