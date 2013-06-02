@@ -1,0 +1,5503 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\date{}
+\renewcommand{\thepage}{\roman{page}}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language spanish-mexico
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 4cm
+\topmargin 4cm
+\rightmargin 2cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Aplicación para la predicción de resultados en la prueba Saber 11º
+\end_layout
+
+\begin_layout Author
+Documento de Anteproyecto de Grado
+\begin_inset Newline newline
+\end_inset
+
+Proyecto de Ingeniería
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Estudiante
+\begin_inset Newline newline
+\end_inset
+
+Jorge Iván Durán Páez
+\begin_inset Newline newline
+\end_inset
+
+200859307
+\begin_inset Newline newline
+\end_inset
+
+jdp0990@gmail.com
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Director
+\begin_inset Newline newline
+\end_inset
+
+David Alejandro Przybilla
+\begin_inset Newline newline
+\end_inset
+
+Ingeniero de Sistemas
+\begin_inset Newline newline
+\end_inset
+
+dav.alejandro@gmail.com
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+Universidad del Valle - sede Tuluá
+\begin_inset Newline newline
+\end_inset
+
+Escuela de Ingeniería de Sistemas y Computación
+\begin_inset Newline newline
+\end_inset
+
+Junio 2012
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+thepage}{
+\backslash
+arabic{page}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{1} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Standard
+En el ámbito de la educación en Colombia, la prueba Saber 11°
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://www.icfes.gov.co/examenes/saber-11o/informacion-general
+\end_layout
+
+\end_inset
+
+ es de gran importancia para medir la calidad de la enseñanza que se está
+ impartiendo en los colegios del país.
+ La prueba Saber 11° es mayoritariamente presentada por estudiantes de grado
+ 11 de los colegios del país, pero no es exclusiva de estos, cualquier persona
+ puede presentarla, siempre y cuando ya haya obtenido título de bachiller.
+\end_layout
+
+\begin_layout Standard
+Los resultados que se obtienen en la prueba no han presentado mejorías important
+es en los últimos 5 años 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-1,key-2,key-3,key-4"
+
+\end_inset
+
+, causando preocupación por la calidad de la educación media en Colombia.
+\end_layout
+
+\begin_layout Standard
+En 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-4"
+
+\end_inset
+
+ se presenta un análisis a los resultados obtenidos por los estudiantes
+ del departamento de Valle del Cauca en las pruebas Saber 5°, 9°
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://www.icfes.gov.co/examenes/pruebas-saber
+\end_layout
+
+\end_inset
+
+ y 11°.
+ Para el caso de la prueba Saber 11°, se presentan los resultados obtenidos
+ en los años de 2002 a 2009, una comparación de estos resultados con los
+ del promedio nacional de cada una de las áreas evaluadas y la categorización
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+ftp://ftp.icfes.gov.co/SABER11/SB11-CLASIFICACION-PLANTELES/Clasificacion%20plantel
+es%20SB11.pdf
+\end_layout
+
+\end_inset
+
+ de los colegios en los años 2010 y 2011.
+\end_layout
+
+\begin_layout Standard
+En las conclusiones y recomendaciones incluidas en 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-4"
+
+\end_inset
+
+, se establece la necesidad de brindar una educación que sea pertinente
+ con las deficiencias académicas de los estudiantes, para así poder emprender
+ planes de mejoramiento en las instituciones educativas y reducir los bajos
+ rendimientos en la prueba Saber 11°.
+\end_layout
+
+\begin_layout Standard
+En el presente documento se propone la construcción de un aplicación, para
+ lograr determinar cuáles son los posibles resultados que obtendrán los
+ estudiantes que están próximos a presentar la prueba Saber 11° y así conocer
+ las áreas académicas en las cuales pueden poseer deficiencias.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Planteamiento del Problema
+\end_layout
+
+\begin_layout Subsection
+Descripción del Problema
+\end_layout
+
+\begin_layout Standard
+Para la construcción de una aplicación, que permita conocer previamente
+ como podría ser el puntaje de un estudiante en una o varias de las áreas
+ académicas evaluadas en la prueba Saber 11°, se cuenta con las bases de
+ datos del ICFES,
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+ftp://ftp.icfes.gov.co/SABER11/
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Estas bases de datos son de acceso gratuito pero previamente se deben registrar
+ los datos personales en http://64.76.89.156/investigacion/index.php/bdicfes/solicit
+udregistro, para poder acceder al ftp.
+\end_layout
+
+\end_inset
+
+ que almacenan información histórica sobre aspectos personales de los evaluados
+ como por ejemplo: calendario académico del colegio al cual pertenece, carácter
+ académico del colegio, ubicación del colegio (departamento y municipio),
+ valor mensual de la pensión del colegio, si el hogar cuenta con servicio
+ de alcantarillado y recolección de basuras, cantidad de automóviles que
+ poseen en el hogar, si tiene o no computador, cantidad de televisores en
+ el hogar, etnia a la cual pertenece, genero, fecha de nacimiento, si trabaja
+ o no, nivel de educación de los padres, ocupación de los padres, etc.
+ Y además información sobre los puntajes obtenidos por ellos en las áreas
+ académicas evaluadas.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+En ftp://ftp.icfes.gov.co/SABER11/SB11-Diccionario_de_Datos-v1-6.pdf se encuentra
+ la información sobre todos los datos que se han recolectado desde el año
+ 2000 hasta la fecha.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+El ICFES suministra estas bases de datos en archivos de Access,
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://office.microsoft.com/es-es/access
+\end_layout
+
+\end_inset
+
+ un archivo por cada prueba realizada desde el año 2000 (se realizan 2 pruebas
+ cada año), pero estas bases de datos no son homogéneas, ya que durante
+ las 24 pruebas registradas hasta el momento la información almacenada de
+ los evaluados no se ha mantenido constante.
+ Durante 12 años la información ha sido recolectada a partir de encuestas
+ en las cuales no siempre se han realizado las mismas preguntas.
+ Por ejemplo, el dato sobre el nivel educativo de los padres se registró
+ durante los años 2000 a 2004, pero no se registró en los años 2005 a 2007
+ y en 2008 vuelve a registrarse hasta ahora.
+ Además los tipos de datos también se han modificado a lo largo de los años,
+ en la época de 2000 a 2004 el valor “3” indicaba que el nivel de estudio
+ de los padres llegaba a básica primaria, pero desde 2008 hasta ahora existen
+ los valores “9” y “10” que significan “Primaria Completa” y “Primaria Incomplet
+a” respectivamente.
+ Causando esto que dentro de las bases de datos se encuentren muchos valores
+ nulos y una falta de concordancia con los tipos de datos en muchos de los
+ 84 atributos que se almacenan en las 24 bases de datos.
+\end_layout
+
+\begin_layout Standard
+Por consiguiente, en el proceso de construcción de una aplicación que permita
+ conocer cómo serán los resultados de un estudiante al momento de presentar
+ la prueba Saber 11°, es necesario realizar la reestructuración de estas
+ bases de datos, para que su información sea concordante y no almacene datos
+ nulos, y así posteriormente utilizarlas como insumo en la construcción
+ de la aplicación.
+\end_layout
+
+\begin_layout Subsection
+Formulación del Problema
+\end_layout
+
+\begin_layout Standard
+¿Cómo construir una aplicación de software, usando las bases de datos suministra
+das por el ICFES, que permita conocer previamente los resultados de un estudiant
+e en la prueba Saber 11°? 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Justificación
+\end_layout
+
+\begin_layout Standard
+Los puntajes obtenidos en la prueba Saber 11° son de gran importancia tanto
+ para los estudiantes que la presentan, como para las instituciones educativas
+ y para el gobierno nacional, ya que estos brindar una estimación de los
+ indicadores de calidad de la educación media en el país.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://www.icfes.gov.co/examenes/saber-11o/informacion-general/objetivos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Un estudiante que desea continuar con su vida académica ingresando a la
+ educación universitaria, se ve en la necesidad de obtener puntajes que
+ le permitan no solo cumplir con los mínimos puntajes necesarios de inscripción
+ en la carrera de su predilección, sino que también le permitan ingresar
+ a ella en la universidad.
+ 
+\end_layout
+
+\begin_layout Standard
+En las instituciones educativas, alcanzar un nivel medio o alto en la clasificac
+ión otorgada por el ICFES es de gran importancia para su prestigio dentro
+ de la sociedad académica, los colegios utilizan además estos puntajes como
+ un indicador de autoevaluación para medir la calidad de sus prácticas pedagógic
+as.
+ 
+\end_layout
+
+\begin_layout Standard
+Como se puede observar en la educación media del país, prácticamente todos
+ los involucrados obtienen beneficios si se mejoran los puntajes obtenidos
+ en la prueba Saber 11°.
+ Un primer paso para trabajar en estas mejoras es tener la capacidad de
+ detectar las deficiencias de los estudiantes, con la aplicación que se
+ propone construir en este documento, se podría dar ese primer paso.
+ 
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Objetivos
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Objetivo General
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Desarrollar una aplicación que permita predecir los puntajes que obtendrá
+ un estudiante en la prueba Saber 11º.
+\end_layout
+
+\begin_layout Subsection
+
+\lang english
+Objetivos Específicos
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+Aplicar el proceso de extracción, transformación y carga (
+\emph on
+Extract, transform and load, ETL
+\emph default
+) a las bases de datos suministradas por el ICFES.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+Construir un clasificador, utilizando técnicas de minería de datos, a partir
+ de la información procesada.
+\end_layout
+
+\begin_layout Enumerate
+
+\lang english
+Implementar una interfaz en donde los usuarios puedan realizar consultas
+ parametrizadas.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Resultados Esperados
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="middle" width="2cm">
+<column alignment="left" valignment="top" width="12cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Objetivo Especifico
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Resultados Esperados
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+Bases de datos del ICFES, con estructuras homogéneas y sin datos nulos.
+\end_layout
+
+\begin_layout Itemize
+Data mart construido con la información procesada en las bases de datos
+ del ICFES.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+Informe sobre algoritmos de clasificación en el proceso de descubrimiento
+ del conocimiento.
+ 
+\end_layout
+
+\begin_layout Itemize
+Selección del algoritmo de clasificación que mejor se adapta a la cantidad
+ y el tipo de datos con los que se cuenta en el data mart.
+ 
+\end_layout
+
+\begin_layout Itemize
+Clasificador construido en base a la selección hecha.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="middle" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Itemize
+Documentación de los proceso de diseño, codificación y pruebas de la interfaz
+ de consultas.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+Cuadro 1: Relación entre los objetivos específicos y los resultados que
+ se desean obtener con cada uno de ellos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+\lang english
+Alcance
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+La presente propuesta establece la construcción de una aplicación que, usando
+ solamente la información almacenada en las bases de datos históricas del
+ ICFES, logre entregar a los usuarios información sobre cómo podrían ser
+ los puntajes que obtendrá un estudiante en cada una de las áreas académicas
+ evaluadas en la prueba Saber 11°.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Para que un usuario pueda conocer el posible resultado de un estudiante,
+ deberá realizar una consulta en donde ingresará datos personales del estudiante
+, estos datos personales que se deben ingresar serán definidos en el proceso
+ de construcción del clasificador, pero no serán distintos a los registrados
+ en las bases de datos del ICFES.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Después de ser consultada la aplicación, la información que contendrá la
+ respuesta estará constituida por los puntajes que podría obtener un estudiante
+ en cada una de las áreas académicas evaluadas en la prueba Saber 11º: lenguaje,
+ matemáticas, biología, química, física, filosofía, ciencias sociales e
+ ingles.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+El proyecto se desarrollará llevando a cabo la propuesta metodológica presentada
+ por José Hernandez en 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Marco Referencial
+\end_layout
+
+\begin_layout Subsection
+Marco Conceptual
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Descubrimiento de conocimiento en bases de datos (KDD): 
+\series default
+Se define como el proceso de identificar patrones significativos en los
+ datos que sean válidos, novedosos, potencialmente útiles y comprensibles
+ para un usuario.
+ El proceso global consiste en transformar información de bajo nivel en
+ conocimiento de alto nivel.
+ El proceso KDD es interactivo e iterativo conteniendo los siguientes pasos:
+ comprender el dominio de aplicación, extraer la base de datos objetivo,
+ preparar los datos minería de datos, Interpretación y utilizar el conocimiento
+ descubierto 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-60"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Minería de datos:
+\series default
+ Es un campo interdisciplinar con el objetivo general de predecir las salidas
+ y revelar relaciones en los datos.
+ Las tareas propias de la minería de datos pueden ser descriptivas, (i.e.
+ descubrir patrones interesantes o relaciones describiendo los datos), o
+ predictivas (i.e.
+ clasificar nuevos datos basándose en los anteriormente disponibles).
+ Para ello se utilizan herramientas automáticas que emplean algoritmos sofistica
+dos para descubrir principalmente patrones ocultos, asociaciones, anomalías,
+ y/o estructuras de la gran cantidad de datos almacenados en los data warehouses
+ u otros repositorios de información, y filtran la información necesaria
+ de las grandes bases de datos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-60"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Clasificación:
+\series default
+ Es la tarea de aproximar una 
+\emph on
+función
+\emph default
+ 
+\emph on
+objetivo 
+\emph default
+desconocida 
+\begin_inset Formula $\Phi:I\times C\rightarrow\left\{ T,F\right\} $
+\end_inset
+
+ (que describe cómo instancias del problema deben ser clasificadas de acuerdo
+ a un experto en el dominio) por medio de una función 
+\begin_inset Formula $\Theta:I\times C\rightarrow\left\{ T,F\right\} $
+\end_inset
+
+ llamada el 
+\emph on
+clasificador
+\emph default
+, donde 
+\begin_inset Formula $C=\left\{ c_{1},...,c_{|c|}\right\} $
+\end_inset
+
+ es un conjunto de categorías predefinido e 
+\emph on
+I
+\emph default
+ es un conjunto de instancias del problema.
+ Comúnmente cada instancia 
+\begin_inset Formula $i_{j}\epsilon I$
+\end_inset
+
+ es representada como una lista 
+\begin_inset Formula $A=\left\{ a_{1},a_{2},...,a_{|A|}\right\} $
+\end_inset
+
+ de valores característicos, conocidos como 
+\emph on
+atributos
+\emph default
+, i.e.
+ 
+\begin_inset Formula $i_{j}=\left\{ a_{1},a_{2},...,a_{|A|j}\right\} $
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $\Phi:i_{j}\times c_{i}\rightarrow T$
+\end_inset
+
+, entonces es llamado un ejemplo positivo de 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+, mientras si 
+\begin_inset Formula $\Phi:i_{j}\times c_{i}\rightarrow F$
+\end_inset
+
+ éste es llamado un ejemplo negativo de 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Para generar automáticamente el clasificador de 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ es necesario un proceso inductivo, llamado el 
+\emph on
+aprendizaje
+\emph default
+, el cual por observar los atributos de un conjunto de instancias preclasificada
+s bajo 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ o 
+\begin_inset Formula $\bar{c_{i}}$
+\end_inset
+
+, adquiere los atributos que una instancia no vista debe tener para pertenecer
+ a la categoría.
+ Por tal motivo, en la construcción del clasificador se requiere la disponibilid
+ad inicial de una colección 
+\begin_inset Formula $\Omega$
+\end_inset
+
+ de ejemplos tales que el valor de 
+\begin_inset Formula $\Phi\left(i_{j},c_{i}\right)$
+\end_inset
+
+ es conocido para cada 
+\begin_inset Formula $\left\langle i_{j},c_{i}\right\rangle \epsilon\Omega\times C$
+\end_inset
+
+.
+ A la colección usualmente se le llama 
+\emph on
+conjunto de entrenamiento
+\emph default
+ 
+\begin_inset Formula $\left(Tr\right)$
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-70"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+ICFES:
+\series default
+ Instituto Colombiano para la Evaluación de la Educación, entidad especializada
+ en ofrecer servicios de evaluación de la educación en todos sus niveles,
+ y en particular apoyar al Ministerio de Educación Nacional en la realización
+ de los exámenes de Estado y en adelantar investigaciones sobre los factores
+ que inciden en la calidad educativa, para ofrecer información pertinente
+ y oportuna para contribuir al mejoramiento de la calidad de la educación
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-80"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Prueba Saber 11º:
+\series default
+ Antes conocida como Examen del ICFES, es un examen de estado que evalúa
+ a los estudiantes que están terminando su ciclo de Educación Media.
+ La prueba tiene como finalidad apoyar los procesos de selección y admisión
+ que realizan las instituciones de Educación Superior.
+ Además de este propósito, la prueba busca:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Brindar al estudiante información que contribuya a la selección de su opción
+ profesional.
+ 
+\end_layout
+
+\begin_layout Itemize
+Proporcionar información a las instituciones de educación básica y media
+ sobre el desempeño de los estudiantes.
+ 
+\end_layout
+
+\begin_layout Itemize
+Contribuir al desarrollo de estudios de tipo cultural, social y educativo.
+ 
+\end_layout
+
+\begin_layout Itemize
+Servir de criterio para otorgar beneficios educativos.
+ 
+\end_layout
+
+\begin_layout Standard
+Las áreas académicas evaluadas actualmente por la prueba Saber 11° son:
+\end_layout
+
+\begin_layout Itemize
+Lenguaje 
+\end_layout
+
+\begin_layout Itemize
+Matemáticas 
+\end_layout
+
+\begin_layout Itemize
+Biología 
+\end_layout
+
+\begin_layout Itemize
+Química 
+\end_layout
+
+\begin_layout Itemize
+Física 
+\end_layout
+
+\begin_layout Itemize
+Filosofía 
+\end_layout
+
+\begin_layout Itemize
+Ciencias sociales 
+\end_layout
+
+\begin_layout Itemize
+Inglés 
+\end_layout
+
+\begin_layout Itemize
+COMPONENTE FLEXIBLE (solo se presenta una de las siguientes opciones)
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Profundización en lenguaje 
+\end_layout
+
+\begin_layout Itemize
+Profundización en matemáticas 
+\end_layout
+
+\begin_layout Itemize
+Profundización en biología 
+\end_layout
+
+\begin_layout Itemize
+Profundización en ciencias sociales 
+\end_layout
+
+\begin_layout Itemize
+Interdisciplinar violencia y sociedad 
+\end_layout
+
+\begin_layout Itemize
+Interdisciplinar medio ambiente
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Data Warehouse: 
+\series default
+Es un repositorio de datos operacionales seleccionados y adaptados subjetivament
+e, que puede responder consultas de tipo ad hoc, estadísticas o analíticas.
+ Está situado en el centro de los sistemas de apoyo a la toma de decisiones
+ de una organización y contiene datos históricos, resumidos y detallados
+ de esta.
+ Es esencial para una inteligencia de negocios efectiva, para la formulación
+ e implementación de estrategias donde la gran cantidad de datos requieren
+ ser procesados de manera rápida para comprender su significado e impacto.
+ Permite una fácil organización y mantenimiento de los datos para una rápida
+ recuperación y análisis de la manera en que sean requeridos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-90"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Data Mart:
+\series default
+ Desde un data warehouse, los datos fluyen hacia los departamentos de la
+ organización, que personalizan la información almacenada para que sea útil
+ en los sistemas de información de cada uno de ellos.
+ Estos componentes individuales con características personalizadas son conocidos
+ como data mart.
+ En otras palabras, es un cuerpo de datos de un sistema de información,
+ que posee la estructura fundamental de un data warehouse, es una subsección
+ de una data warehouse y más popular que este 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-90"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Antecedentes o Estado del Arte
+\end_layout
+
+\begin_layout Subsubsection
+Detección de Patrones de Bajo Rendimiento Académico y Deserción Estudiantil
+ con Técnicas de Minería de Datos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-100"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Su objetivo fue determinar en la comunidad universitaria perfiles de bajo
+ rendimiento académico y deserción estudiantil aplicando técnicas de descubrimie
+nto del conocimiento, a partir de los datos almacenados en las bases de
+ datos durante los últimos 15 años.
+ Este proceso se apoyó con TariyKDD, una herramienta de minería de datos
+ de distribución libre.
+ Aunque el trabajo de investigación este orientado a detectar bajos rendimientos
+ de estudiantes en la universidad, su proceso de investigación es similar
+ al que se espera llevar en este proyecto, por lo tanto sirve de guía para
+ el desarrollo de este.
+ Además de que la información utilizada para predecir el comportamiento
+ académico de los estudiantes se basa en información socio-económica, que
+ es la misma con la que se cuenta en las bases de datos del ICFES para construir
+ el clasicador.
+\end_layout
+
+\begin_layout Standard
+Este trabajo desarrolló de manera organizada y bien estructurada, cada uno
+ de los pasos planteados en 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50"
+
+\end_inset
+
+.
+ El algoritmo de minería de datos utilizado fue arboles de clasicación con
+ C4.5 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50,key-70"
+
+\end_inset
+
+, los resultados entregados por esta investigación, fueron claros y mostraron
+ cuales eran los perfiles de los estudiantes que podrían prever un bajo
+ rendimiento.
+\end_layout
+
+\begin_layout Standard
+La investigación se realizo en la Universidad de Nariño de Colombia.
+ Las bases de datos recolectadas contenían información sobre el desempeño
+ académico e información personal de 46173 estudiantes, acumuladas durante
+ 15 años.
+\end_layout
+
+\begin_layout Standard
+Inicialmente se contaba con 69 atributos en las bases de datos que describían
+ las características de los estudiantes, pero después de pasar por el proceso
+ de limpieza y transformación de los datos, se llego a una lista relevante
+ de 26 atributos y una cantidad de registros de 20329.
+\end_layout
+
+\begin_layout Standard
+Finalmente, se aplicaron las técnicas de minería de datos para clasificación,
+ en este caso el algoritmo C4.5 y se obtuvieron las reglas que indicaban
+ que tipo de situaciones personales de un estudiante podrían llevar a obtener
+ un bajo rendimiento en la universidad.
+ Unos ejemplos de las reglas obtenidas son:
+\end_layout
+
+\begin_layout Itemize
+Si el estrato socioeconómico es 2, el ponderado de exámenes de estado ICFES
+ está entre 50 y 70, es del Sur de Nariño, está en primer semestre y pertenece
+ a la facultad de Ciencias Humanas, entonces su rendimiento es Bajo.
+ El 68% con estas características se clasifican de esta manera.
+\end_layout
+
+\begin_layout Itemize
+Si la edad de ingreso es menor o igual a 18 años, el estrato socioeconómico
+ es 2, género masculino, el ponderado ICFES está entre 50 y 70, vive con
+ la familia, es del Sur de Nariño, está en primer semestre, está en la facultad
+ de Ciencias Naturales y Matemáticas, entonces su rendimiento es Bajo.
+ El 67% con estas características se clasifican de esta manera.
+\end_layout
+
+\begin_layout Subsubsection
+Minería de Datos en la Educacion 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-110"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este documento se describe el uso de la minería de datos aplicada a entornos
+ educativos y su uso pedagógico.
+ De manera muy clara y especifica brinda una vista de como se debe realizar
+ un proceso de minería de datos en educacion y su importancia.
+\end_layout
+
+\begin_layout Standard
+Además nos muestra un ejemplo: 
+\begin_inset Quotes eld
+\end_inset
+
+Identicación de características de fracasos escolares en institutos
+\begin_inset Quotes erd
+\end_inset
+
+.
+ En este se usan arboles de decisión porque permiten encontrar cuales son
+ las variables que tienen mayor relación con la variable que se desea predecir.
+ El algoritmo de arboles de decisión utilizado fue CHAID 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-120"
+
+\end_inset
+
+ (Chi-Squared Automatic Interaction Detection).
+ CHAID realiza comparaciones en pares para encontrar la variable de predicción
+ más altamente relacionada con la variable raíz.
+ En sistemas de muchas variables, tener esta función implementada en un
+ ordenador es esencial para picar amplios conjuntos de datos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-110"
+
+\end_inset
+
+.
+ El resultado entregado fue un árbol, el cual se debe analizar para determinar
+ su información.
+\end_layout
+
+\begin_layout Subsubsection
+Minería de Datos: Predicción de la Deserción Escolar Mediante el Algoritmo
+ de Árboles de Decisión y el Algoritmo de los k Vecinos más Cercanos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-130"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se aplicaron técnicas de minería de datos para buscar conocer previamente
+ si los estudiantes eran propensos a abandonar su carrera en la Universidad
+ Tecnológica de Izúcar de Matamoros, Mexico, tomando como base de análisis
+ los datos del estudio socioeconómico del EXANI-II
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.ceneval.edu.mx/ceneval-web/content.do?page=1738
+\end_layout
+
+\end_inset
+
+, elaborado por el CENEVAL
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.ceneval.edu.mx/ceneval-web/content.do?page=1702
+\end_layout
+
+\end_inset
+
+, mismo que se aplica desde el año 2003 en la institución.
+ Para esta investigación se utilizaron específicamente dos algoritmos: el
+ algoritmo de árboles de clasicación C4.5 y el algoritmo de los k vecinos
+ más cercanos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-70"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En el proceso de transformación de los datos, el mas largo en muchos de
+ los trabajos que se realizan, incluyendo este, se mofidicó e integró toda
+ la información encontrada en distintos formatos de almacenamiento, además
+ no tenía un estructura clara, porque constaba de información de estudiantes
+ de 14 cuatrimestres, por supuesto en cada registro no se realizaban las
+ mismas preguntas, además de que muchas de estas se pueden responder como
+ 
+\begin_inset Quotes eld
+\end_inset
+
+No lo se
+\begin_inset Quotes erd
+\end_inset
+
+, después de superar esta etapa y aplicar los algoritmos previstos, se encontró
+ que el algoritmo de los k vecinos mas cercanos funciona bien con pocos
+ datos (477 instancias), pero al momento de probarlo con 6525 instancias,
+ el algoritmo C4.5, tuvo resultados más confiables (98,98%).
+\end_layout
+
+\begin_layout Standard
+Aquí también se realizo la creación de una herramienta que pueda ser accedida
+ por cualquier usuario y le informa sobre la probabilidad de que un estudiante
+ deserte.
+ Los resultados mostraron que la edad, la situación económica y el nivel
+ de ingles, tienen fuerte relación con que el estudiante deserte de la universid
+ad.
+\end_layout
+
+\begin_layout Subsubsection
+Modelo Predictivo para la Determinación de Causas de Reprobación Mediante
+ Minería de Datos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-140"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En este trabajo, realizado en la Universidad Tecnológica de Puebla, Mexico,
+ se llevó a cabo el análisis de los datos que permitirán generar un modelo
+ que ayude a predecir, desde que los alumnos ingresan a la Universidad,
+ las causas que los llevarán a reprobar, así como las materias con mayor
+ riesgo de ser reprobadas.
+\end_layout
+
+\begin_layout Standard
+El algoritmo de clasicación utilizado fue C4.5, y se recolectaron datos con
+ información de todas las carrera ofrecidas por la universidad.
+ Este proceso de nuevo fue demorado, porque sus fuentes de almacenamiento
+ poseían distintas estructuras y no existía una homogeneidad en los datos.
+\end_layout
+
+\begin_layout Standard
+Los resultados obtenidos mostraron que de las 157 materias distintas que
+ ofrece la universidad en sus carreras, 64 materias tienen un porcentaje
+ de reprobación menor a 40% y por lo tanto no generan un árbol de predicción.
+ En las materias con un porcentaje mayor al 50% se determinó que el factor
+ principal de reprobación es el profesor que imparte la materia y también
+ la edad de los estudiantes.
+\end_layout
+
+\begin_layout Subsubsection
+La metodología del Data Mining.
+ Una aplicación al consumo de alcohol en adolescentes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-150"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aunque en esta investigación su objetivo no estaba focalizado en descubrir
+ conocimiento en el área de la educación.
+ Sí es un trabajo interesante y que puede servir de guía en este trabajo
+ de grado, ya que en ella se realizo la construcción de 3 algoritmos distintos
+ de predicción: redes neuronales, arboles de decisión y naive bayes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El trabajo se centra en demostrar la importancia que tiene el descubrimiento
+ del conocimiento en bases de datos al momento de predecir comportamientos
+ en distintas áreas como educación, finanzas, comercio, telecomunicaciones,
+ salud, entre otras.
+\end_layout
+
+\begin_layout Standard
+Estos algoritmos fueron aplicados en un conjunto de datos que contenía 7030
+ registro que informaban sobre el consumo de alcohol en jóvenes de entre
+ 14 y 18 años con una cantidad de 20 variables que incluían información
+ de la personalidad como los constructos de autoestima, impulsividad, conducta
+ antisocial y búsqueda de sensaciones.
+\end_layout
+
+\begin_layout Standard
+Los mejores resultados se obtuvieron con el modelo construido con redes
+ neuronales, 64,1% de precisión al momento de predecir si un joven consumía
+ o no alcohol.
+ Los otros resultados fueron una precisión de 62,3% con arboles de decisión
+ usando el algoritmo CART 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50"
+
+\end_inset
+
+ y una precisión de 59,9% usando Naive Bayes.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+En el área de la educación, los trabajos revisados se orientaron a encontrar
+ posibilidades de bajos rendimiento académicos y así lograr conocer perfiles
+ o factores que hacen que los estudiantes no logren las metas propuestas
+ en sus estudios.
+ Este trabajo de grado también se orientará a encontrar estas posibilidades
+ de bajos rendimientos, pero no aplicado a estudiantes de universidades,
+ sino que será aplicado a los estudiantes que presentan la prueba Saber
+ 11°.
+\end_layout
+
+\begin_layout Standard
+También se observó la variedad de algoritmos utilizados para realizar estos
+ modelos de predicción, en algunos trabajos se utilizó más de un algoritmo
+ para lograr encontrar comparaciones de rendimiento y mejores niveles de
+ precisión con cada algoritmo.
+ En este trabajo se evaluarán algoritmos para la construcción de clasificadores,
+ con el fin de encontrar información sobre cómo se comportan con la cantidad
+ de datos usados y con la estructura que posean estos datos.
+\end_layout
+
+\begin_layout Standard
+En este trabajo se utilizarán bases de datos que contiene más de 5 millones
+ de registros
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+ftp://ftp.icfes.gov.co/SABER11/ SB11-FTP_Algunos_Totales_de_Control-v1-1.pdf
+\end_layout
+
+\end_inset
+
+, recolectados a lo largo de 11 años y que presentan una gran variación
+ en la integridad de los atributos de estos registros.
+ Por eso este trabajo centrará su primera parte en la homogeneización de
+ estas bases de datos.
+ En los trabajos revisados, la cantidad de datos utilizados en los procesos
+ de investigación, no eran tantos como los que se pretenden utilizar en
+ este trabajo.
+\end_layout
+
+\begin_layout Standard
+En conclusión los trabajos aquí presentados sirven de base para la realización
+ de este trabajo, ya que sus fases de investigación fueron las mismas en
+ la mayoría de los trabajos, iguales a las que se aplicarán en este trabajo,
+ además los resultados obtenidos en ellos, muestran la utilidad de la construcci
+ón de clasicadores para predecir resultados de estudiantes en exámenes o
+ procesos de su vida académica.
+\end_layout
+
+\begin_layout Subsection
+Marco Teórico
+\end_layout
+
+\begin_layout Standard
+Para la realización de este trabajo se utilizara la propuesta de fases clarament
+e establecidas en 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50"
+
+\end_inset
+
+ donde establece que: “Este proceso es iterativo e interactivo.
+ Es iterativo ya que la salida de alguna de las fases puede hacer volver
+ a pasos anteriores y porque a menudo son necesarias varias iteraciones
+ para extraer conocimiento de alta calidad.
+ Es interactivo porque el usuario (experto en el dominio del problema) intervien
+e en la toma de muchas decisiones
+\begin_inset Quotes erd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La teoría del proceso del desarrollo de un proyecto de descubrimiento del
+ conocimiento en bases de datos, define los siguientes pasos:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename v13n1a07-3.jpg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Proceso de descubrimiento del conocimiento en bases de datos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Selección (
+\emph on
+Extraction
+\emph default
+) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50,key-100"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta etapa del proceso, es donde se investigan las fuentes, en las cuales
+ se podrán encontrar los datos que me servirán para general un almacén de
+ datos con información útil.
+ Se recolectan todos los datos obtenidos en estas fuentes y se organizan
+ en bases de datos que se usaran para la etapa de transformación.
+\end_layout
+
+\begin_layout Standard
+Comúnmente en los trabajos orientados a la academia 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-100,key-110,key-130,key-140"
+
+\end_inset
+
+, estos datos son la información de los estudiantes de la institución a
+ lo largo del tiempo.
+ Los datos pueden incluir información acerca de la situación socio-económica
+ del estudiante, sus notas, su entorno académico, información familiar,
+ entre muchas otras que defina la institución que es importante recolectar.
+\end_layout
+
+\begin_layout Standard
+En 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-140"
+
+\end_inset
+
+, donde se buscaba encontrar las reglas que indicaran si un estudiante era
+ propenso a reprobar una materia, se seleccionaron como datos útiles: calificaci
+ones por área del examen de admisión EXANI II, datos relevantes del estudio
+ socio-económico, calificación del test de intereses vocacionales (KUDER),
+ calificación del test de coeciente intelectual (RAVEN), estilos de aprendizaje,
+ evaluación a profesores, asignaturas cursadas y su promedio por cuatrimestre.
+\end_layout
+
+\begin_layout Subsubsection
+Transformación (
+\emph on
+Transformation
+\emph default
+) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50,key-100"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta etapa el proceso se basa en realizar primero una limpieza de los
+ datos, la limpieza permite obtener datos sin valores nulos o anómalos,
+ además se estandarizan los datos para que sean del mismo tipo.
+ 
+\end_layout
+
+\begin_layout Standard
+Para eliminar los datos nulos, se puede omitir este atributo o en algunos
+ casos, cuando no son muchos los registros carentes de este valor, se pueden
+ aplicar técnicas estadísticas como la media para insertar un valor valido
+ y así no eliminar el registro o el atributo de la base de datos.
+\end_layout
+
+\begin_layout Standard
+Estos procesos de limpieza, integración y agregación de los datos.
+ Entregan como resultado una base de datos mofidicada con los atributos
+ relevantes en los registros, para responder al objetivo de la investigación,
+ muchas veces esto genera que la cantidad de registros que se tenían inicialment
+e, se disminuya signicativamente.
+ Pero esto nos permitirá obtener resultados mucho más confiables, ya que
+ no habrán datos que generen conflictos a la hora de generar clasificaciones
+ con respecto a algunos atributos.
+\end_layout
+
+\begin_layout Subsubsection
+Carga (
+\emph on
+Load
+\emph default
+) 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50,key-100"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta etapa se transfieren los datos procesados en las fases anteriores
+ al medio de almacenamiento escogido por el equipo de desarrollo.
+ Estos medios de almacenamiento pueden ser bases de datos, data warehouse,
+ data mart, entre otros.
+\end_layout
+
+\begin_layout Subsubsection
+Minería de datos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50,key-100"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El objetivo de esta etapa es la búsqueda y descubrimiento de patrones insospecha
+dos y de interés utilizando diferentes técnicas de descubrimiento tales
+ como clasificación, clustering, patrones secuenciales, asociación, entre
+ otras
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-100"
+
+\end_inset
+
+.
+ Las diferentes técnicas utilizadas pertenecen a campos como la inteligencia
+ arfiticial y estadísticas.
+ Algunos algoritmos usados comúnmente son: arboles de decisión C4.5, ID3
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-160"
+
+\end_inset
+
+ y CHAID (Detección Automática de Interacción basada en Chi-Cuadrado), algoritmo
+ de los k vecinos más cercanos, Naive Bayes, redes neuronales, algoritmo
+ de reglas de asociación Apriori, algoritmo de inducción de reglas como
+ el Prism, diferentes versiones de algoritmos evolutivos, programación genética
+ basada en gramática.
+\end_layout
+
+\begin_layout Subsubsection
+Interpretación y evaluación de los resultados 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50,key-100"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En esta etapa se interpretan los patrones descubiertos y posiblemente se
+ retorna a los anteriores pasos o etapas para posteriores iteraciones.
+ Esta etapa puede incluir la visualización de los patrones extraídos, la
+ remoción de los patrones redundantes o irrelevantes y la traducción de
+ los patrones útiles en términos que sean entendibles para el usuario final
+ de la aplicación 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-100"
+
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Metodología
+\end_layout
+
+\begin_layout Subsection
+Actividades a Realizar
+\end_layout
+
+\begin_layout Standard
+Para cumplir con el objetivo propuesto en este documento, se desarrollará
+ este proyecto siguiendo las fases del proceso de extracción del conocimiento
+ propuesto en 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "key-50"
+
+\end_inset
+
+, por lo tanto las actividades a realizar son las siguientes:
+\end_layout
+
+\begin_layout Enumerate
+Integración y recopilación de la información.
+\end_layout
+
+\begin_layout Enumerate
+Diseño del data mart.
+\end_layout
+
+\begin_layout Enumerate
+Extracción, transformación y carga (ETL) de los datos.
+\end_layout
+
+\begin_layout Enumerate
+Construcción del clasicador.
+\end_layout
+
+\begin_layout Enumerate
+Evaluación e interpretación de los resultados.
+\end_layout
+
+\begin_layout Enumerate
+Codicación de la aplicación.
+\end_layout
+
+\begin_layout Enumerate
+Realización de pruebas a la aplicación.
+\end_layout
+
+\begin_layout Enumerate
+Realización del documento de informe final del trabajo de grado.
+\end_layout
+
+\begin_layout Subsection
+Cronograma de actividades
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="14" columns="17">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actividad
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mes 1
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mes 2
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mes 3
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mes 4
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="3" alignment="left" valignment="middle" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Actividad
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mes 5
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mes 6
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mes 7
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mes 8
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multirow="4" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+X
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Diagrama de gantt: cronograma de actividades.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Presupuesto
+\end_layout
+
+\begin_layout Standard
+A continuación se presenta el presupuesto necesario para realizar el proyecto.
+ Primero se presentará una tabla (Cuadro 3) en donde se referencia la informació
+n general de los recursos que se utilizarán para la realización del proyecto,
+ después se presentarán en detalle (Cuadros 4, 5, 6, 7 y 8) cada uno de
+ los gastos en que se incurrirá en cada recurso.
+\end_layout
+
+\begin_layout Standard
+Las fuentes de financiamiento que tendrá el proyecto serán la Universidad
+ del Valle y el estudiante desarrollador del trabajo de grado.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="4">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="left" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0">
+<column alignment="right" valignment="top" width="0pt">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Rubro 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Universidad
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Estudiante
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\emph on
+Valor (en pesos)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Personal 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15'040.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15'040.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hardware
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+800.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+800.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Software
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+260.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+260.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Desplazamiento
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+192.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+192.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Recursos Bibliográficos y Papelería
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total del Proyecto
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+15'542.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+800.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+16'342.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{table}{2}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Costo total del proyecto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Tabla detallada de Personal
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="4">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Concepto 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dedicación (horas/semana)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Costo por hora
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Costo Total (en pesos)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Director
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20.000
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+20.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Desarrollador
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+36
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12.500
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+450.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total Gastos Personal (semana)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+470.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{table}{3}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Costo del personal del proyecto por semana.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Tabla detallada de Hardware
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Costo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Computador portátil
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Equipo de computo para la realización de gran parte de las actividades 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+800.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total Gastos Hardware
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+800.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{table}{4}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Costo de recursos de hardware del proyecto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Tabla detallada de Software
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Costo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Microsoft Access 2010
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www7.buyoce.microsoft.com/latam/product.aspx?sku=10234393&cache=-274082995&ac
+tion=buy&culture=es- MX
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Necesario para visualizar las bases de datos entregadas por el ICFES
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+260.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total Gastos Software
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+260.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{table}{5}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Costo de recursos de software del proyecto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Tabla detallada de Desplazamiento
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="0">
+<column alignment="left" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Costo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Viaje Buga - Tuluá
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Diariamente se necesita el desplazamiento entre estas ciudades para reuniones
+ con el director
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total Gastos Desplazamiento (semana)
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{table}{6}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Costo de transporte del personal del proyecto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+Tabla detallada de Bibliografía y Papelería
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="3">
+<features islongtable="true" longtabularalignment="center">
+<column alignment="center" valignment="top" width="0pt">
+<column alignment="left" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tipo
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descripción
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Costo
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Impresiones
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Impresiones de artículos y avances de la documentación
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total Gastos Bibliografía y Papelería
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+50.000
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{table}{7}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Costo papelería del proyecto.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newpage
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+addcontentsline{toc}{section}{Referencias} 
+\end_layout
+
+\end_inset
+
+
+\lang english
+Periódico El Colombiano, “Leve mejoría en pruebas Saber 11”.
+ [artículo en Internet]
+\lang spanish-mexico
+.
+ http://www.elcolombiano.com/BancoConocimiento/L/leve_mejoria_en_pruebas_sab
+\begin_inset Newline newline
+\end_inset
+
+er_11/leve_mejoria_en_pruebas_saber_11.asp
+\lang english
+ [Consulta: 24 agosto de 2012].
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+
+\lang english
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+Periódico El Tiempo, “El 45% de los colegios presentó bajo rendimiento en
+ pruebas Saber 11”.
+ [artículo en Internet]
+\lang spanish-mexico
+.
+ 
+\lang english
+http://www.eltiempo.com/vida-de-hoy/educacion/ARTICULO-WEB-NEW_NOTA_INTERIOR-83848
+22.html
+\lang spanish-mexico
+ 
+\lang english
+[Consulta: 24 agosto de 2012].
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+
+\lang english
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+Revista Dinero, “Las pruebas del Icfes no son el único indicador”.
+ [artículo en Internet]   http://www.dinero.com/edicion-impresa/caratula/articulo/
+las-pruebas-del-icfes-no-unico-indicador [Consulta: 14 marzo de 2012].
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+
+\lang english
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+Departamento Del Valle Del Cauca, Secretaria De Educación.
+ Informe Ejecutivo Análisis Pruebas Saber 5º ,9º Y 11º.
+ Santiago de Cali, Febrero 15 de 2012.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+
+\lang english
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-50"
+
+\end_inset
+
+
+\lang spanish-mexico
+Hernández Orallo José, Ramírez Quintana Ma.
+ José, Ferri, Ramírez César, Introducción a la minería de datos, Person
+ Educación, S.A.
+ Madrid 2004, ISBN: 978-84-205-4091-7.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-60"
+
+\end_inset
+
+José C.
+ Riquelme, Roberto Ruiz, Karina Gilbert, “Minería de Datos: Conceptos y
+ Tendencias,” 
+\emph on
+Revista Iberoamericana de Inteligencia Artificial
+\emph default
+, No.
+ 29 (2006), pp.
+ 11-18.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-70"
+
+\end_inset
+
+Téllez A., Extracción de Información con Algoritmos de Clasificación [Tesis
+ de Maestría].
+ Tonantzintla, Puebla, México.
+ Instituto Nacional de Astrofísica, Óptica y Electrónica.
+ 2005.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-80"
+
+\end_inset
+
+ICFES, Presentación.
+ [artículo en Internet] http://www.icfes.gov.co/informacion-institucional/informaci
+on-general [Consulta: 4 junio de 2012].
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-90"
+
+\end_inset
+
+C.S.R.
+ Prabhu, Data Warehousing Concepts, Techniques Products and Applications,
+ Prentice-Hall, India 2006, ISBN: 81-203-2068-9.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-100"
+
+\end_inset
+
+Timarán Pereira, Ricardo.
+ Una lectura sobre deserción universitaria en estudiantes de pregrado desde
+ la perspectiva de la minería de datos.Revista Científica Guillermo de Ockham,
+ vol.
+ 8, núm.
+ 1, enero-junio, 2010, pp.
+ 121-130.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-110"
+
+\end_inset
+
+Álvaro Jiménez Galindo, Hugo Álvarez García.
+ Minería de Datos en la Educación.
+ Universidad Carlos III de Madrid.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-120"
+
+\end_inset
+
+Dr Ray Hoare, Using CHAID for classication problems, en New Zealand Statistical
+ Association 2004 conference, Wellington.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-130"
+
+\end_inset
+
+Sergio Valero Orea, Alejandro Salvador Vargas, Marcela García Alonso.
+ Minería de datos: predicción de la deserción escolar mediante el algoritmo
+ de árboles de decisión y el algoritmo de los k vecinos más cercanos.
+ Universidad Tecnológica de Izúcar de Matamoros, Izúcar de Matamoros, Puebla,
+ México.
+ Recursos digitales para la educación y la cultura volumen Kaambal.
+ ISBN Volumen: 978-607-95446-1-4.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-140"
+
+\end_inset
+
+Erika Rodallegas Ramos, Areli Torres González, Beatriz B.
+ Gaona Couto, Erick Gastelloú Hernández, Rafael A.
+ Lez ama Morales, Sergio Valero Orea.
+ Modelo predictivo para la determinación de causas de reprobación mediante
+ Minería de Datos.
+ Universidad Tecnológica de Izúcar de Matamoros, Mexico.
+ Recursos digitales para la educación y la cultura volumen Kaambal.
+ ISBN Volumen: 978-607-95446-1-4.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-150"
+
+\end_inset
+
+Elena Gervilla García, Rafael Jiménez López, Juan José Montaño Moreno, Albert
+ Sesé Abad, Berta Cajal Blasco, Alfonso Palmer Pol.
+ La metodología del Data Mining.
+ Una aplicación al consumo de alcohol en adolescentes.
+ Área de Metodología de las Ciencias del Comportamiento.
+ Departamento de Psicología.
+ Universitat de les Illes Balears.
+ Adicciones, 2009, Vol.
+ 21 Núm.
+ 1, Págs.
+ 65-80.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-160"
+
+\end_inset
+
+T.Jyothirmayi et.
+ al., An Algorithm for Better Decision Tree, International Journal on Computer
+ Science and Engineering Vol.
+ 02, No.
+ 09, 2010, 2827-2830.
+\end_layout
+
+\end_body
+\end_document
